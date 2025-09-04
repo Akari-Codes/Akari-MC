@@ -1,15 +1,31 @@
-<select>
+<style>
+    .pagecentre {
+    width: 450px;
+    height: 930px;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    }
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="icon" type="image/x-icon" href="../icon.jpg">
+<select id="rec_selctor" onchange="update_rec()">
     <option value="all">All Recipies</option>
     <option value="ender_pearl">Ender Pearl</option>
     <option value="gun_powder">Gunpowder</option>
     <option value="blaze_powder">Blaze Powder</option>
-    <!--<option value=""></option>-->
+    <!--<option value="[dataname]"></option>-->
 </select>
-<div id="container">
+<div class="pagecentre" id="container">
     <!--
-    <div id="">
-        <h3></h3>
-        <p></p>
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
         <img src="/assets/"></img>
     </div>
     -->
@@ -29,3 +45,16 @@
         <img src="assets/blaze_powder.png"></img>
     </div>
 </div>
+<script>
+    function update_rec() {
+        let list_count = 3;
+        const rec_array = ["ender_pearl","gun_powder","blaze_powder"];
+        var rec = document.getElementById('rec_selctor').value;
+        let x = 0;
+        while(x != list_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != list_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+</script>
