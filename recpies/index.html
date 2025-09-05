@@ -1,4 +1,5 @@
 <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
     .pagecentre {
     width: 450px;
     height: 930px;
@@ -11,50 +12,272 @@
     
     margin: auto;
     }
+
 </style>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" type="image/x-icon" href="../icon.jpg">
-<select id="rec_selctor" onchange="update_rec()">
-    <option value="all">All Recipies</option>
-    <option value="ender_pearl">Ender Pearl</option>
-    <option value="gun_powder">Gunpowder</option>
-    <option value="blaze_powder">Blaze Powder</option>
+<title>Akar MC | Custom Recipies</title>
+<h1 style="text-align: center;">Akari MC | Custom Recipies</h1>
+<select id="filter" onchange="update_filter()">
+    <option value="container_craft">Crafting Table</option>
+    <option value="container_smith">Smithing Table</option>
+    <option value="container_stoner">Stone Cutter</option>
+    <option value="container_loom">Loom</option>
+    <option value="container_smoke">Smoker</option>
+    <option value="container_furnice">Furnice</option>
+    <option value="container_blast">Blast Furnice</option>
+</select>
+<div class="pagecentre" id="container_craft"><br><br><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <h1>Crafting Table Recipies</h1>
+    <select id="craft_selctor" onchange="update_craft()">
+    <option value="all_craft">All Recipies</option>
+    <option value="ender_pearl_craft">Ender Pearl</option>
+    <option value="gun_powder_craft">Gunpowder</option>
+    <option value="blaze_powder_craft">Blaze Powder</option>
     <!--<option value="[dataname]"></option>-->
 </select>
-<div class="pagecentre" id="container">
     <!--
     <div id="dataname">
         <h3>[name]</h3>
         <p>[recipetype]</p>
-        <img src="/assets/"></img>
+        <img src="/assets/_craft_/"></img>
     </div>
     -->
-    <div id="ender_pearl">
+    <div id="ender_pearl_craft">
         <h3>Ender Pearl</h3>
         <p>Crafting Table Recipe</p>
-        <img src="assets/ender_pearl.png"></img>
+        <img src="assets/_craft_/ender_pearl.png"></img>
     </div>
-    <div id="gun_powder">
+    <div id="gun_powder_craft">
         <h3>Gunpowder</h3>
         <p>Crafting Table Recipe</p>
-        <img src="assets/gun_powder.png"></img>
+        <img src="assets/_craft_/gun_powder.png"></img>
     </div>
-    <div id="blaze_powder">
+    <div id="blaze_powder_craft">
         <h3>Blaze Powder</h3>
         <p>Crafting Table Recipe</p>
-        <img src="assets/blaze_powder.png"></img>
+        <img src="assets/_craft_/blaze_powder.png"></img>
+    </div>
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
     </div>
 </div>
+<div class="pagecentre" id="container_smith"><br><br><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <h1>Smithing Table Recipies</h1>
+    <select id="smith_selctor" onchange="update_smith()">
+    <option value="all_smith">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_smith_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+<div class="pagecentre" id="container_stoner"><br><br>
+    <h1>Stone Cutter Recipies</h1>
+    <select id="stoner_selctor" onchange="update_stoner()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <option value="all_stoner">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_stonecutter_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+<div class="pagecentre" id="container_loom"><br><br>
+    <h1>Loom Recipies</h1>
+    <select id="_loomselctor" onchange="update_loom()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <option value="all_loom">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_loom_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+<div class="pagecentre" id="container_smoke"><br><br>
+    <h1>Smoker Furnice Recipies</h1>
+    <select id="smoke_selctor" onchange="update_smoke()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <option value="all_smoke">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_smoke_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+<div class="pagecentre" id="container_furnice"><br><br>
+    <h1>Furnice Recipies</h1>
+    <select id="furnice_selctor" onchange="update_furnice()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <option value="all_furnice">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_furncie_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+<div class="pagecentre" id="container_blast"><br><br>
+    <h1>Blast Furnice Recipies</h1>
+    <select id="blast_selctor" onchange="update_blast()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <option value="all_blast">All Recipies</option>
+    <!--<option value="[dataname]"></option>-->
+</select>
+<!--
+    <div id="dataname">
+        <h3>[name]</h3>
+        <p>[recipetype]</p>
+        <img src="/assets/_blast_/"></img>
+    </div>
+    -->
+    
+
+    <div style="text-align: center;">
+        <br><br>
+    <p>Akari MC by Lilith (Akari_VT)</p>
+    <br>
+    </div>
+</div>
+
 <script>
-    function update_rec() {
-        let list_count = 3;
-        const rec_array = ["ender_pearl","gun_powder","blaze_powder"];
-        var rec = document.getElementById('rec_selctor').value;
+    function update_filter() {
+    var filter = document.getElementById('filter').value
+    let filter_count = 7;
+        const filter_array = ["container_craft","container_smith","container_stoner","container_loom","container_smoke","container_furnice","container_blast"];
         let x = 0;
-        while(x != list_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
-        if(rec != "all") {document.getElementById(rec).style.display = "";} else {
+        while(x != filter_count) {document.getElementById(filter_array[x]).style.display = "none";x = x+1};
+        document.getElementById(filter).style.display = "";
+        }
+    function update_craft() {
+        let craft_count = 3;
+        const rec_array = ["ender_pearl_craft","gun_powder_craft","blaze_powder_craft"];
+        var rec = document.getElementById('craft_selctor').value;
+        let x = 0;
+        while(x != craft_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_craft") {document.getElementById(rec).style.display = "";} else {
             let x = 0;
-        while(x != list_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        while(x != craft_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
         }
     }
+    function update_smith() {
+        let smith_count = 0;
+        const rec_array = ["_smith"];
+        var rec = document.getElementById('smith_selctor').value;
+        let x = 0;
+        while(x != smith_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_smith") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != smith_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    function update_stoner() {
+        let stoner_count = 0;
+        const rec_array = ["_stoner"];
+        var rec = document.getElementById('stoner_selctor').value;
+        let x = 0;
+        while(x != stoner_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_stoner") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != stoner_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    function update_loom() {
+        let loom_count = 0;
+        const rec_array = ["_loom"];
+        var rec = document.getElementById('loom_selctor').value;
+        let x = 0;
+        while(x != loom_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_loom") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != loom_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    function update_smoke() {
+        let smoke_count = 0;
+        const rec_array = ["_smoke"];
+        var rec = document.getElementById('smoke_selctor').value;
+        let x = 0;
+        while(x != smoke_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_smoke") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != smoke_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    function update_furnice() {
+        let furnice_count = 0;
+        const rec_array = ["_furnice"];
+        var rec = document.getElementById('furnice_selctor').value;
+        let x = 0;
+        while(x != furnice_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_furnice") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != furnice_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    function update_blast() {
+        let blast_count = 0;
+        const rec_array = ["_blast"];
+        var rec = document.getElementById('blast_selctor').value;
+        let x = 0;
+        while(x != blast_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
+        if(rec != "all_blast") {document.getElementById(rec).style.display = "";} else {
+            let x = 0;
+        while(x != blast_count) {document.getElementById(rec_array[x]).style.display = "";x = x+1}
+        }
+    }
+    update_filter()
 </script>
