@@ -34,13 +34,17 @@
     <option value="ender_pearl_craft">Ender Pearl</option>
     <option value="gun_powder_craft">Gunpowder</option>
     <option value="blaze_powder_craft">Blaze Powder</option>
-    <!--<option value="[dataname]"></option>-->
+    <option value="trident_craft">Trident</option>
+    <option value="name_tag_craft">Name Tag</option>
+    <!--
+<option value="[dataname]"></option>
+-->
 </select>
     <!--
     <div id="dataname">
         <h3>[name]</h3>
         <p>[recipetype]</p>
-        <img src="_craft.png"></img>
+        <img src="_.png"></img>
     </div>
     -->
     <div id="ender_pearl_craft">
@@ -58,7 +62,16 @@
         <p>Crafting Table Recipe</p>
         <img src="blaze_powder_craft.png"></img>
     </div>
-    
+    <div id="trident_craft">
+        <h3>Trident</h3>
+        <p>Crafting Table Recipe</p>
+        <img src="trident_craft.png"></img>
+    </div>
+<div id="name_tag_craft">
+        <h3>Name Tag</h3>
+        <p>Crafting Table Recipe</p>
+        <img src="name_tag_craft.png"></img>
+    </div>
 
     <div style="text-align: center;">
         <br><br>
@@ -203,8 +216,8 @@
         document.getElementById(filter).style.display = "";
         }
     function update_craft() {
-        let craft_count = 3;
-        const rec_array = ["ender_pearl_craft","gun_powder_craft","blaze_powder_craft"];
+        const rec_array = ["ender_pearl_craft","gun_powder_craft","blaze_powder_craft","trident_craft","name_tag_craft"];
+        let craft_count = rec_array.length;
         var rec = document.getElementById('craft_selctor').value;
         let x = 0;
         while(x != craft_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
