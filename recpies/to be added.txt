@@ -2,38 +2,6 @@ Arrow Bundle
 Makes 20
 Place flint at the top, sticks in the middle, and feathers at the bottom in columns.
 
-Chainmail Boots
-Makes 1
-Arrange iron nuggets in an inverted 'T' and place iron ingots at the sides of the bottom row.
-
-Chainmail Chestplate
-Makes 1
-Arrange iron ingots in the shape of a chestplate with iron nuggets at the sides.
-
-Chainmail Helmet
-Makes 1
-Arrange iron nuggets in the shape of a helmet, with an iron ingot in the center top.
-
-Chainmail Leggings
-Makes 1
-Arrange iron ingots at the top and iron nuggets in the sides.
-
-Copper Block
-Makes 1
-Smelt a raw copper block.
-
-Creeper Head
-Makes 1
-Surround a block of stone with gunpowder.
-
-Crying Obsidian
-Makes 1
-Surround an obsidian block with ghast tears in a plus shape.
-
-Dirt Path
-Makes 8
-Surround wheat with dirt.
-
 Diorite and Granite to Quartz
 Makes 1
 Smelt a block of diorite or granite.
