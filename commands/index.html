@@ -18,15 +18,6 @@
     .commands p{
         font-size: 14;
     }
-    .commands_alt {
-        display:none;
-    }
-    .commands_alt p {
-        font-size: 14;
-    }
-    .commands_alt code {
-        font-size: 15;
-    }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -34,7 +25,18 @@
 <title>Akari MC | Custom Commands</title>
 <button onclick='window.location.replace("../")'>Back</button><br><br>
 <h1 style="text-align: center;">Custom Commands</h1>
-<input placeholder="Search" id="search_bar" onchange="search()"></input> <button onclick="search()"><i class="fa fa-search"></i></button>
+<select id="command_selector" onchange="reload_list()">
+    <!--
+    <optgroup></optgroup>
+    -->
+    <!--
+    <option value=""></option>
+    -->
+    <option value="all">All Commands</option>
+    <optgroup>Commands</optgroup>
+    <option value="msg">Message A Player</option>
+    <option value="tp">Teleportation</option>
+</select>
 <div id="commands_container">
     <!--
     <div id="[name]" class="commands">
@@ -42,51 +44,46 @@
         <p><code>[command]</code></p>
         <p>[info]</p>
     </div>
-    <div id="[smallname]" class="commands_alt">
-        <h3>[name]</h3>
-        <p><code>[command]</code></p>
-        <p>[info]</p>
-    </div>
     -->
-    <div id="teleport" class="commands">
+    <div id="tp" class="commands">
         <h3>Teleport</h3>
         <p><code>/user-tp</code></p>
-        <p>Opens a interface that allows you to either enter co-ordinates or select a player to teleport to.</p>
+        <p>Opens an interface that allows you to either enter co-ordinates or select a player to teleport to.</p>
     </div>
-    <div id="tp" class="commands_alt">
-        <h3>Teleport</h3>
-        <p><code>/user-tp</code></p>
-        <p>Opens a interface that allows you to either enter co-ordinates or select a player to teleport to.</p>
+    <div id="msg" class="commands">
+        <h3>Message a Player</h3>
+        <p><code>/user-msg</code></p>
+        <p>Opens an interface to choose a player and type a message to send to chosen player</p>
     </div>
 </div>
 <script>
-    function search() {
-        let prompt = document.getElementById("search_bar").value.toLowerCase();
-        const search_array = ["teleport","tp"];
-        let max_index = search_array.length;
-        let min_index = 0;
-        hide_all(search_array, max_index);
-        var indexd = min_index;
-        while (indexd <= max_index) {
-            var current_array_data = search_array[indexd];
-            current_array_data.replace("_", " ");
-            if(current_array_data.includes(prompt) === true){
-                document.getElementById(search_array[indexd]).style.display = "";
-            };
-            if(prompt == current_array_data) {
-                document.getElementById(search_array[indexd]).style.display = "";
-            }
-            else{
-            var indexd = indexd + 1;
-            };
+    function get_array() {
+        const command_array = ["tp","msg"]
+        return command_array
+    }
+    function reload_list() {
+        let selected_command = document.getElementById("command_selector").value;
+        const command_array = get_array();
+        if(selected_command == "all") {show_all(command_array)}
+        else {
+            hide_all(command_array);
+            document.getElementById(selected_command).style.display = "";
         };
-    };
-    function hide_all(search_array, max_index) {
-        var indexd = 0;
-        while (indexd <= max_index) {
-            document.getElementById(search_array[indexd]).style.display = "none";
-            var indexd = indexd + 1;
+        };
+    function hide_all(command_array) {
+        let x = 0;
+        while (x != command_array.length) {
+            document.getElementById(command_array[x]).style.display = "none";
+            x = x + 1;
         };
         return;
     };
+    function show_all(command_array) {
+        let x = 0;
+        while (x != command_array.length) {
+            document.getElementById(command_array[x]).style.display = "";
+            x = x + 1;
+        };
+        return;
+    }
 </script>
