@@ -37,6 +37,7 @@
     <option value="msg">Message A Player</option>
     <option value="tp">Teleportation</option>
     <option value="worlds">Worlds Swicher</option>
+    <option value="gui">Survival GUI Interface</option>
     </optgroup>
 </select>
 <div id="commands_container">
@@ -62,10 +63,15 @@
         <p><code>/worlds</code></p>
         <p>Opens an interface to choose a world to switch too</p>
     </div>
+    <div id="gui" class="commands">
+        <h3>Survival GUI Interface</h3>
+        <p><code>/gui</code></p>
+        <p>Collection of Buttones and GUI Interfaces in one Interface</p>
+    </div>
 </div>
 <script>
     function get_array() {
-        const command_array = ["tp","msg","worlds"]
+        const command_array = ["tp","msg","worlds","gui"]
         return command_array
     }
     function reload_list() {
