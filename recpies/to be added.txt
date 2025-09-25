@@ -2,10 +2,6 @@ Arrow Bundle
 Makes 20
 Place flint at the top, sticks in the middle, and feathers at the bottom in columns.
 
-Diorite and Granite to Quartz
-Makes 1
-Smelt a block of diorite or granite.
-
 Dragon Breath
 Makes 1 Place an ender eye at the top, a glass bottle in the middle, and an ender pearl at the bottom.
 Echo Shard
