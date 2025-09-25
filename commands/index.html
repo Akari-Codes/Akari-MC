@@ -36,6 +36,7 @@
     <optgroup label="Commands">
     <option value="msg">Message A Player</option>
     <option value="tp">Teleportation</option>
+    <option value="worlds">Worlds Swicher</option>
     </optgroup>
 </select>
 <div id="commands_container">
@@ -56,10 +57,15 @@
         <p><code>/user-msg</code></p>
         <p>Opens an interface to choose a player and type a message to send to chosen player</p>
     </div>
+    <div id="worlds" class="commands">
+        <h3>Switch Between Worlds</h3>
+        <p><code>/worlds</code></p>
+        <p>Opens an interface to choose a world to switch too</p>
+    </div>
 </div>
 <script>
     function get_array() {
-        const command_array = ["tp","msg"]
+        const command_array = ["tp","msg","worlds"]
         return command_array
     }
     function reload_list() {
