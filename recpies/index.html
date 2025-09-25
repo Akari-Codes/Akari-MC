@@ -19,7 +19,8 @@
 <title>Akar MC | Custom Recipies</title>
 <h1 style="text-align: center;">Akari MC | Custom Recipies</h1>
 <div class="pagecentre" id="container_craft"><br><br><button onclick='window.location.replace("../")'>Back</button><br><br>
-    <select id="filter" onchange="update_filter()">
+    <h1>Crafting Table Recipies</h1>
+        <select id="filter" onchange="update_filter()">
     <option value="container_craft">Crafting Table</option>
     <option value="container_smith">Smithing Table</option>
     <option value="container_stoner">Stone Cutter</option>
@@ -28,7 +29,6 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
-    <h1>Crafting Table Recipies</h1>
     <select id="craft_selctor" onchange="update_craft()">
     <!--
     <optgroup label=""></optgroup>
@@ -172,6 +172,7 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
+<select>
     <!--
     <optgroup label=""></optgroup>
     -->
@@ -197,7 +198,7 @@
 </div>
 <div class="pagecentre" id="container_loom"><br><br>
     <h1>Loom Recipies</h1>
-    <select id="_loomselctor" onchange="update_loom()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <button onclick='window.location.replace("../")'>Back</button><br><br>
         <select id="filter" onchange="update_filter()">
     <option value="container_craft">Crafting Table</option>
     <option value="container_smith">Smithing Table</option>
@@ -207,6 +208,7 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
+<select id="_loomselctor" onchange="update_loom()">
     <!--
     <optgroup label=""></optgroup>
     -->
@@ -232,7 +234,7 @@
 </div>
 <div class="pagecentre" id="container_smoke"><br><br>
     <h1>Smoker Furnice Recipies</h1>
-    <select id="smoke_selctor" onchange="update_smoke()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <button onclick='window.location.replace("../")'>Back</button><br><br>
         <select id="filter" onchange="update_filter()">
     <option value="container_craft">Crafting Table</option>
     <option value="container_smith">Smithing Table</option>
@@ -242,6 +244,7 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
+<select id="smoke_selctor" onchange="update_smoke()">
     <!--
     <optgroup label=""></optgroup>
     -->
@@ -267,7 +270,7 @@
 </div>
 <div class="pagecentre" id="container_furnice"><br><br>
     <h1>Furnice Recipies</h1>
-    <select id="furnice_selctor" onchange="update_furnice()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <button onclick='window.location.replace("../")'>Back</button><br><br>
         <select id="filter" onchange="update_filter()">
     <option value="container_craft">Crafting Table</option>
     <option value="container_smith">Smithing Table</option>
@@ -277,6 +280,7 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
+<select id="furnice_selctor" onchange="update_furnice()">
     <!--
     <optgroup label=""></optgroup>
     -->
@@ -286,6 +290,8 @@
     <optgroup label="Furnice Smelting Recipies">
     <option value="all_furnice">All Recipies</option>
     <option value="copper_block_blast">Copper Block</option>
+    <option value="granite_to_quartz_furnice">Granite to Quartz</option>
+    <option value="diorite_to_quartz_furnice">Diorite to Quartz</option>    
     </optgroup>
 </select>
 <!--
@@ -300,6 +306,16 @@
         <p>Furnice Recipies</p>
         <img src="copper_block_blast.png"></img>
     </div>
+    <div id="granite_to_quartz_furnice">
+        <h3>Granite to Quartz</h3>
+        <p>Furnice Recipies</p>
+        <img src="granite_to_quartz_furnice.png"></img>
+    </div>
+    <div id="diorite_to_quartz_furnice">
+        <h3>Diorite to Quartz</h3>
+        <p>Furnice Recipies</p>
+        <img src="diorite_to_quartz_furnice.png"></img>
+    </div>
     <div style="text-align: center;">
         <br><br>
     <p>Akari MC by Lilith (Akari_VT)</p>
@@ -308,7 +324,7 @@
 </div>
 <div class="pagecentre" id="container_blast"><br><br>
     <h1>Blast Furnice Recipies</h1>
-    <select id="blast_selctor" onchange="update_blast()"><button onclick='window.location.replace("../")'>Back</button><br><br>
+    <button onclick='window.location.replace("../")'>Back</button><br><br>
         <select id="filter" onchange="update_filter()">
     <option value="container_craft">Crafting Table</option>
     <option value="container_smith">Smithing Table</option>
@@ -318,6 +334,7 @@
     <option value="container_furnice">Furnice</option>
     <option value="container_blast">Blast Furnice</option>
 </select>
+<select id="blast_selctor" onchange="update_blast()">
     <!--
     <optgroup label=""></optgroup>
     -->
@@ -358,7 +375,7 @@
         document.getElementById(filter).style.display = "";
         }
     function update_craft() {
-        const rec_array = ["ender_pearl_craft","gun_powder_craft","blaze_powder_craft","trident_craft","name_tag_craft"];
+        const rec_array = ["ender_pearl_craft","gun_powder_craft","blaze_powder_craft","trident_craft","name_tag_craft","chainmail_helmet_craft","chainmail_chestplate_craft","chainmail_leggings_craft","chainmail_boots_craft","creeper_head_craft","crying_obsidian_craft","dirt_path_craft"];
         let craft_count = rec_array.length;
         var rec = document.getElementById('craft_selctor').value;
         let x = 0;
@@ -414,7 +431,7 @@
     }
     function update_furnice() {
         let furnice_count = 0;
-        const rec_array = ["_furnice"];
+        const rec_array = ["copper_block_blast","granite_to_quartz_furnice","diorite_to_quartz_furnice"];
         var rec = document.getElementById('furnice_selctor').value;
         let x = 0;
         while(x != furnice_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
@@ -425,7 +442,7 @@
     }
     function update_blast() {
         let blast_count = 0;
-        const rec_array = ["_blast"];
+        const rec_array = ["copper_block_blast"];
         var rec = document.getElementById('blast_selctor').value;
         let x = 0;
         while(x != blast_count) {document.getElementById(rec_array[x]).style.display = "none";x = x+1};
